@@ -1,0 +1,73 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Roboto:wght@300;500;700;900&display=swap');
+
+body {
+  background-color: #DDE1D4;
+  padding: 15px;
+  font-family: 'DM Serif Text', serif;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+}
+
+
+.grid {
+  width: 60vw;
+  height: 35vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  font-size: 5vw;
+}
+
+.grid.first {
+  background-color: #dae7de;
+  color: #f44708;
+}
+
+.grid.second {
+  background-color: #008a69;
+  color: #fdfdfd;
+}
+
+.grid.third {
+  background-color: #f44708;
+  color: #fdfdfd;
+}
+
+.grid.fourth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.inner-grid {
+  font-size: 3vw;
+}
+
+.inner-grid.first {
+  background-color: #f7aac5;
+  color: #f44708;
+}
+
+.inner-grid.second {
+  background-color: #5f5ffa;
+  color: #fdfdfd;
+}
+
+.inner-grid.third {
+  background-color: #ffc127;
+  color: #f44708;
+}
+
+.inner-grid.fourth {
+  background-color: #f97374;
+  color: #fdfdfd;
+}
+
+.txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

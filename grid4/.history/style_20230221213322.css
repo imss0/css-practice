@@ -1,0 +1,165 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: relative;
+  width: 80vw;
+  height: 60vw;
+}
+
+.grid {
+  border: 7px solid #f2e555;
+  display: grid;
+  grid-template-columns: 3vw auto 3vw;
+  grid-template-rows: 3vw auto max-content max-content 3vw;
+}
+
+.item {
+  border: 4px solid #fd6b3a;
+}
+
+/* 위, 아래 */
+.item.top {
+  border-bottom: 0px;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.item.bottom {
+  grid-column: 1 / -1;
+  grid-row: 5 / 6;
+  border-top: 0px;
+}
+
+.item.top,
+.item.bottom {
+  font-weight: 600;
+  color: #fd6b3a;
+  font-size: 1rem;
+  letter-spacing: 0.05em text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+
+/* 좌, 우 텍스트 영역 */
+.item.left-top,
+.item.right-top,
+.item.right-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+  font-weight: 700;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.item.left-top {
+  background-color: #fd6b3a;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+
+.item.text-small {
+  color: #fd6b3a;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item.text-small div {
+  margin: 1rem;
+  position: relative;
+  font-weight: 800;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.item.text-small p {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+
+.item.right-top {
+  display: flex;
+  background-color: #46ab4f;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.item.right-bottom {
+  background-color: #46ab4f;
+  grid-column: 3 / 4;
+  grid-row: 3 / 5;
+  border-top: 0px;
+}
+
+/* 좌측 SNS 로고 영역 */
+.item.left-bottom {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  border-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  color: #fd6b3a;
+  font-size: 1.4rem;
+  margin: 0.2rem;
+}
+
+
+/* 중앙 영역 */
+.item.middle {
+  grid-column: 2 / 3;
+  grid-row: 2 / 5;
+  border-left: 0px;
+  border-right: 0px;
+  background-image: url(https://images.unsplash.com/photo-1579169825453-8d4b4653cc2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);
+  background-size: cover;
+  font-style: none;
+  font-weight: 800;
+  font-size: 5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Shrikhand', cursive;
+}
+
+/* 챗봇 박스 */
+.chat {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 10%;
+  right: 22%;
+  z-index: 5;
+  background-color: #fd6b3a;
+  box-shadow: 3px 3px 3px black;
+}
+
+#chatbot {
+  color: white;
+  margin: 12.5px 12.5px 12.5px 12.5px;
+}
